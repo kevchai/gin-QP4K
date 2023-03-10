@@ -17,3 +17,5 @@ RUN apk add --update --no-cache ca-certificates
 RUN apk add curl
 COPY --from=builder /go/bin/* /usr/local/bin/
 EXPOSE 9930
+
+RUN injective-guilds api
